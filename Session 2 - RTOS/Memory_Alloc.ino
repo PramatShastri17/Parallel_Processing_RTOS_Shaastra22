@@ -33,9 +33,9 @@ void setup() {
   
   // Strat the only task here
   xTaskCreatePinnedToCore(
-            testTask,      // Function to to be called
-            "Test Task",   // Name of Task
-            1500,           // Stack Size (bytes in ESP32)
+            testTask,       // Function to to be called
+            "Test Task",    // Name of Task
+            1024,           // Stack Size (bytes in ESP32)
             NULL,           // Parameter to pass to function
             1,              // TAsk priority (0 to configMAX_PRIORITIES - 1)
             NULL,           // Task handle
