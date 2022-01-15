@@ -1,2 +1,3 @@
-# RTOS-Workshop
-Shaastra Workshop RTOS  Hand-on Session
+# Parallel Processing and RTOS Workshop 
+#### Workshop Content Shaastra 2022
+Put links here
