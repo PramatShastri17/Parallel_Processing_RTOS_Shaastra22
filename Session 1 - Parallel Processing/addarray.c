@@ -21,9 +21,11 @@ void main() {
     double start = omp_get_wtime();
 
     omp_set_num_threads(NUM_THREADS);
+    
+    int k;
 
-    #pragma omp parallel for
-    for (int k=0;k<N;k++) {
+    #pragma omp parallel for private(k)
+    for (k=0;k<N;k++) {
         C[k] = A[k] + B[k];
     }
 
