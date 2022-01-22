@@ -25,8 +25,10 @@ void incTask(void *parameters) {
 	  
 	// Critical section of code
     // Controls the outcome of the tasks
-    shared_var++;
+    local_var = shared_var;
+    local_var++;
     vTaskDelay(random(100, 500) / portTICK_PERIOD_MS);
+    shared_var = local_var;
   
     // Print out new shared variable
     Serial.println(shared_var);
