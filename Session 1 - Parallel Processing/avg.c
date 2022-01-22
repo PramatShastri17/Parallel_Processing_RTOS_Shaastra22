@@ -15,7 +15,7 @@ void main() {
     
     int i;
 
-    #pragma omp parallel for reduction(+:avg) private(k) 
+    #pragma omp parallel for reduction(+:avg) private(i) 
     for(i=0;i<N;i++) {
         avg += A[i];
     }
