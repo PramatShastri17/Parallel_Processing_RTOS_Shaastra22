@@ -12,9 +12,11 @@ void main() {
     for(int i=0;i<N;i++) {
         A[i] = i+1;
     }
+    
+    int i;
 
-    #pragma omp parallel for reduction(+:avg) 
-    for(int i=0;i<N;i++) {
+    #pragma omp parallel for reduction(+:avg) private(k) 
+    for(i=0;i<N;i++) {
         avg += A[i];
     }
     avg = avg/N;
